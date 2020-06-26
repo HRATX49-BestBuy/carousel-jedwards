@@ -1,0 +1,48 @@
+{
+  "name": "carousel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.compiled.js",
+    "build2": "webpack --config webpack.config.js",
+    "build": "babel server/index.js --out-file server/server.compiled.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HRATX49-BestBuy/carousel-jedwards.git"
+  },
+  "author": "Joshua Edwards",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HRATX49-BestBuy/carousel-jedwards/issues"
+  },
+  "homepage": "https://github.com/HRATX49-BestBuy/carousel-jedwards#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.1",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "hooks": "^0.3.2",
+    "mysql": "^2.18.1",
+    "node": "^14.4.0",
+    "path": "^0.12.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "ts-loader": "^7.0.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
