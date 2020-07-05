@@ -399,6 +399,12 @@ svg {
 
 .name:hover {
 
+  color: #001e73;
+}
+
+.itemName:hover {
+
+  color: #001e73;
   text-decoration: underline;
   
 }
@@ -454,6 +460,18 @@ svg {
   color: #0457c8;
   cursor: pointer;
   text-align: -webkit-match-parent;
+}
+
+.totalReviews:hover {
+
+  color: #001e73;
+}
+
+.totalReviews:hover {
+
+  color: #001e73;
+  text-decoration: underline;
+  
 }
 
 .itemRating {
