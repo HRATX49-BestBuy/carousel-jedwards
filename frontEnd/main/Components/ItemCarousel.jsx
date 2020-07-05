@@ -2,28 +2,35 @@ import React, {useState} from 'react';
 import Item from './Item.jsx';
 import $ from 'jquery';
  
-
+// this component renders all the items in the carousel and controls the scrolling logic
 // ! solve logic problem with the buttons working both directions when at 0 or 2
 const ItemCarousel = (props) => {
 
-    // index variable for helping to control what items are currently being viewed
+    // array of all the items within the current carousel
     let itemArray = Array.from(props.data);
+    // only grab 9 items from the carousel so we don't have straglers when you scroll
     itemArray = itemArray.slice(0, 9);
 
+    // variable to set the current index within the carousel 
+    // needed to track when position the carousel is in
     const [index, setIndex] = useState(1);
     var scrollIndex = index;
-    // const [endIndex, setendIndex] = useState(9);
+
+    // needed to control the state of the items for potential future finctionality
     const [carouselData, setCarouselData] = useState(itemArray);
-    // const [carouselData, setCarouselData] = useState(itemArray.slice(index, endIndex));
+
+    // array needed to control where the slider scrolls based on the index
     const spot = [0, 1065, 2130];
+    // set position of the current set of items
     const [scroll, setScroll] = useState(spot[1]);
     
 //========================================================================
 // functions for controlling the arrow buttons on the side of the carousel
 //========================================================================
     const nextItems = () => {
-        // starts at 0 but is otherwise equal to 'index'
-        
+
+        // there is no scrollRight in case you are wondering why I only use scrollLeft
+        // this move the carousel to the position within the 'spot' array
         $(".carouselList").animate({scrollLeft: scroll});
 
         scrollIndex++;
@@ -66,6 +73,7 @@ const ItemCarousel = (props) => {
                     <h2 className="peopleViewed">People also viewed<span className="xItems">{'(' + carouselData.length + ')'}</span></h2>
                 </div>
                 <div className="bottomLine"></div>
+                    {/* this creates the arrow for the scroll button */}
                     <button className="previousButton" onClick={() => previousItems()}>
                         <svg className="svgLeft"><path className="pathLeft"></path></svg>
                     </button>
@@ -79,6 +87,7 @@ const ItemCarousel = (props) => {
                     })}
                     </ul>
                 </div>
+                    {/* this creates the arrow for the scroll button */}
                     <button id="next" className="nextButton" onClick={() => nextItems()}>
                         <svg className="svgRight"><path className="pathRight"></path></svg>
                     </button>
@@ -88,19 +97,3 @@ const ItemCarousel = (props) => {
 }
 
 export default ItemCarousel;
-
-
-        // if (endIndex <= itemArray.length - 4) {
-        //     setIndex(index + 3);
-        //     setendIndex(endIndex + 3);
-        // } else {
-        //     setIndex(6);
-        //     setendIndex(9);
-        // }
-        // setCarouselData(itemArray.slice(index, endIndex));
-
-        // if (index >= 3) {
-        //     setIndex(index - 3);
-        //     setendIndex(endIndex - 3);
-        // }
-        // setCarouselData(itemArray.slice(index, endIndex));

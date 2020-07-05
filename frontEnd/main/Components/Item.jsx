@@ -1,18 +1,19 @@
 import React, {useState} from 'react';
 import Rating from '@material-ui/lab/Rating';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
 import GradeOutlinedIcon from '@material-ui/icons/GradeOutlined';
-import Typography from '@material-ui/core/Typography';
 
+// this component will create each individual item in the carousel and
+// uses css grid for placement of the items within each node in the carousel
 const Item = (props) => {
 
+    // was used at one point, but is no longer used.  May shift that later
     const [stars, setStars] = useState(props.data.customer_review_AVG);
 
     return (
 
         <div className="itemContainer">
             <div className="itemBlock">
-
+                
                 <div className="image">
                     <img className="itemImage" src={props.data.product_image} onClick={() => props.getId(props.data.id)}></img>
                 </div>
@@ -26,6 +27,7 @@ const Item = (props) => {
                     <li className="liReviews">
                         <div className="liDiv">
                             <i className="stars">
+                                {/* this star rating component uses material ui https://material-ui.com/components/rating/#rating */}
                                 <Rating name="half-rating-read" 
                                         value={props.data.customer_review_AVG}
                                         precision={0.1} 
@@ -42,7 +44,7 @@ const Item = (props) => {
                 <div className="price">
                     <span className="itemPrice">{'$' + props.data.regularPrice}</span>
                 </div>
-
+                {/* this is the component for the custom check box */}
                 <div type="compare">
                     <label className="checkbox">
                         <input type="checkbox"></input>
