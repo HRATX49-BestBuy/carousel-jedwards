@@ -1,21 +1,15 @@
-/* font-family: 'Questrial', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Sarabun', sans-serif; */
+#Carousel {
 
-#root {
+  display: flexbox;
+  justify-content: center;
+}
 
-  width: 100%;
-  float: left;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  box-sizing: border-box;
-  
-  font-size: 12px;
-  line-height: normal;
-  color: #040c13;
-  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+.mainContainer {
+
+  display: flexbox;
+  justify-content: center;
+  max-width: 1200px;
+
 }
 
 .carouselWrapper {
@@ -123,7 +117,13 @@ h2 {
 
 .carouselList {
 
-  display: block;
+  display: flex;
+
+  overflow-x: scroll;
+  overflow: hidden;
+  /* scroll-snap-points-x: repeat(900px);
+  scroll-snap-type: mandatory; */
+
   list-style-type: disc;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -164,6 +164,11 @@ svg {
 
 }
 
+.nextButton:focus {
+
+  outline: 0;
+}
+
 .previousButton {
 
   background: none;
@@ -181,6 +186,11 @@ svg {
   margin-top: -25px;
   width: 50px;
   left: 0;
+}
+
+.previousButton:focus {
+
+  outline: 0;
 }
 
 .svgRight {
@@ -322,6 +332,7 @@ svg {
   box-sizing: border-box;
 
   width: 33.33333%;
+  min-width: 33.33333%;
   visibility: visible;
 
   padding: 0 0 0 15px;
@@ -382,12 +393,18 @@ svg {
   font-size: 13px;
   overflow: hidden;
   margin: 0px;
-  line-height: 17px;
+  line-height: 16px;
 
 }
 
 .name:hover {
 
+  color: #001e73;
+}
+
+.itemName:hover {
+
+  color: #001e73;
   text-decoration: underline;
   
 }
@@ -443,6 +460,18 @@ svg {
   color: #0457c8;
   cursor: pointer;
   text-align: -webkit-match-parent;
+}
+
+.totalReviews:hover {
+
+  color: #001e73;
+}
+
+.totalReviews:hover {
+
+  color: #001e73;
+  text-decoration: underline;
+  
 }
 
 .itemRating {
