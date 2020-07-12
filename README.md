@@ -6,20 +6,17 @@ In this project I led a team of 3 other software engineers who completed the nav
 
 ![Carousel Component Demo](demo/carousel.gif)
 
-
 Technology used:
+
     React
     Hooks
     JQuery
     Node
     Express
     Axios
-
     Material UI
-
     AWS S3
     AWS Elastic Beanstalk
     AWS RDS
     AWS E2
-
     Trello
