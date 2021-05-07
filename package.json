@@ -33,7 +33,7 @@
     "rater-js": "^1.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "underscore": "^1.10.2"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
