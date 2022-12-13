@@ -24,7 +24,7 @@
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "core-util-is": "^1.0.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "hooks": "^0.3.2",
     "http-proxy-middleware": "^1.0.4",
     "jquery": "^3.5.1",
